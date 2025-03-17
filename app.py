@@ -104,10 +104,10 @@ def get_playing_eleven(response):
     try:
         
         playing_eleven = {}
-        team_name_one = response.xpath(f'/html/body/div[4]/div[2]/div[9]/text()').extract()[0].replace('Squad','').strip()
-        team_one_playing_eleven = response.xpath(f'/html/body/div[4]/div[2]/div[10]/div[2]/a/text()').extract()
-        team_name_two = response.xpath(f'/html/body/div[4]/div[2]/div[12]/text()').extract()[0].replace('Squad','').strip()
-        team_two_playing_eleven = response.xpath(f'/html/body/div[4]/div[2]/div[13]/div[2]/a/text()').extract()
+        team_name_one = response.xpath(f'/html/body/div[4]/div[2]/div[7]/text()').extract()[0].replace('Squad','').strip()
+        team_one_playing_eleven = response.xpath(f'/html/body/div[4]/div[2]/div[8]/div[2]/a/text()').extract()
+        team_name_two = response.xpath(f'/html/body/div[4]/div[2]/div[11]/text()').extract()[0].replace('Squad','').strip()
+        team_two_playing_eleven = response.xpath(f'/html/body/div[4]/div[2]/div[12]/div[2]/a/text()').extract()
         playing_eleven = {team_name_one:team_one_playing_eleven,team_name_two:team_two_playing_eleven}
     except Exception as e:
         try:
