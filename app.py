@@ -115,8 +115,8 @@ def get_playing_eleven(response):
             team_name_one = response.xpath(f'/html/body/div[3]/div[2]/div[9]/text()').extract()[0].replace('Squad','').strip()
             team_one_playing_eleven = response.xpath(f'/html/body/div[3]/div[2]/div[10]/div[2]/a/text()').extract()
             team_one_playing_eleven = list(map(lambda s:s.replace('(c & wk)',"").replace('(c)','').replace('(wk)','').strip(),team_one_playing_eleven))
-            team_name_two = response.xpath(f'/html/body/div[3]/div[2]/div[12]/text()').extract()[0].replace('Squad','').strip()
-            team_two_playing_eleven = response.xpath(f'/html/body/div[3]/div[2]/div[13]/div[2]/a/text()').extract()
+            team_name_two = response.xpath(f'/html/body/div[3]/div[2]/div[13]/text()').extract()[0].replace('Squad','').strip()
+            team_two_playing_eleven = response.xpath(f'/html/body/div[3]/div[2]/div[14]/div[2]/a/text()').extract()
             team_two_playing_eleven = list(map(lambda s:s.replace('(c & wk)',"").replace('(c)','').replace('(wk)','').strip(),team_two_playing_eleven))
             playing_eleven = {team_name_one:team_one_playing_eleven,team_name_two:team_two_playing_eleven}
             print(e)
